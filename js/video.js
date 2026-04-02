@@ -8,10 +8,11 @@ window.addEventListener("load", function () {
 	console.log("Auto play is set to false");
 	video.loop = false;
 	console.log("Loop is set to false");
-	
+
 
 	document.querySelector("#play").addEventListener("click", function () {
 		video.play();
+		document.querySelector("#volume").textContent = document.querySelector("#slider").value + "%";
 		console.log("Play Video");
 	});
 
@@ -65,9 +66,9 @@ window.addEventListener("load", function () {
 
 
 	document.querySelector("#slider").addEventListener("input", function () {
-		console.log("The current value is " + video.volume);          // ✅ 原始volume（改变前）
+		console.log("The current value is " + video.volume);         
 		video.volume = this.value / 100;
-		console.log("The current value is " + video.volume);          // ✅ 现在的volume（改变后）
+		console.log("The current value is " + video.volume);          
 		document.querySelector("#volume").textContent = this.value + "%";
 		console.log(document.querySelector("#volume"));   
 	});
