@@ -8,8 +8,7 @@ window.addEventListener("load", function () {
 	console.log("Auto play is set to false");
 	video.loop = false;
 	console.log("Loop is set to false");
-
-	document.querySelector("#volume").textContent = Math.round(video.volume * 100) + "%";
+	
 
 	document.querySelector("#play").addEventListener("click", function () {
 		video.play();
